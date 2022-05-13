@@ -16,9 +16,23 @@ class IndexMassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+ 
     }
+    
+    @IBAction func nextButtonPressed() {
+        guard let enterWeight = weightTF.text, !enterWeight.isEmpty else {
+            showAlert(with: "Oops", and: "You forgot enter your weight")
+            return
+        }
+        
+        guard let enterHight = hightTF.text, !enterHight.isEmpty else {
+            showAlert(with: "Oops", and: "You forgot enter your hight")
+            return
+        }
+        
+      
+    }
+    
     
 
     /*
@@ -32,3 +46,23 @@ class IndexMassViewController: UIViewController {
     */
 
 }
+extension IndexMassViewController {
+    private func getIndexMass(_ weight: Int , hight: Int) -> Double{
+        Double(weight) / pow(Double(hight),2)
+    }
+    
+    private func showAlert(with title: String, and massage: String){
+        let alert = UIAlertController(title: title,
+                                      message: massage,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default) { _ in
+           // self.weightTF.text = ""
+           // self.hightTF.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+
