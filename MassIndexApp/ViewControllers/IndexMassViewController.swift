@@ -19,6 +19,11 @@ class IndexMassViewController: UIViewController {
  
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            view.endEditing(true)
+    }
+    
     @IBAction func nextButtonPressed() {
         guard let enterWeight = weightTF.text, !enterWeight.isEmpty else {
             showAlert(with: "Oops", and: "You forgot enter your weight")
