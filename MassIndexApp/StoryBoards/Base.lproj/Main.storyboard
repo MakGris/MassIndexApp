@@ -130,28 +130,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3p-6q-UYo">
-                                <rect key="frame" x="139" y="273.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="L2Q-QW-lfu">
+                                <rect key="frame" x="27" y="84" width="266" height="351.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHk-eL-9ft">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="168"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3p-6q-UYo">
+                                        <rect key="frame" x="112.5" y="231" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-xM-gJF">
+                                        <rect key="frame" x="52" y="314.5" width="162" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Show me my workout" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showWorkoutPressed" destination="n6E-o4-osY" eventType="touchUpInside" id="g3y-Ju-l2G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aRg-7i-jBQ"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="o3p-6q-UYo" firstAttribute="centerX" secondItem="bgj-nr-ua5" secondAttribute="centerX" id="3yJ-eJ-Cwg"/>
-                            <constraint firstItem="o3p-6q-UYo" firstAttribute="centerY" secondItem="bgj-nr-ua5" secondAttribute="centerY" id="qIC-qx-T44"/>
+                            <constraint firstItem="L2Q-QW-lfu" firstAttribute="top" secondItem="aRg-7i-jBQ" secondAttribute="top" constant="40" id="0km-Ud-3wz"/>
+                            <constraint firstItem="L2Q-QW-lfu" firstAttribute="centerX" secondItem="bgj-nr-ua5" secondAttribute="centerX" id="FCN-hH-tN5"/>
+                            <constraint firstItem="aRg-7i-jBQ" firstAttribute="bottom" secondItem="L2Q-QW-lfu" secondAttribute="bottom" constant="132.5" id="GDi-24-aHA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eJu-bG-KbB"/>
                     <connections>
+                        <outlet property="bodyTypesImage" destination="UHk-eL-9ft" id="xL8-GT-1cv"/>
                         <outlet property="resultLabel" destination="o3p-6q-UYo" id="1S0-RV-0eD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tcw-ag-kKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2449" y="80"/>
+            <point key="canvasLocation" x="2448.75" y="79.225352112676063"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Hc-xI-VSn">

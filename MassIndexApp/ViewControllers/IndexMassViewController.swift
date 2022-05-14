@@ -24,8 +24,6 @@ class IndexMassViewController: UIViewController {
  
     }
     
-    
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super.touchesBegan(touches, with: event)
             view.endEditing(true)
@@ -37,30 +35,21 @@ class IndexMassViewController: UIViewController {
         
         getIndexMass(weight: weight, hight: hight)
         
-        
         guard let enterWeight = weightTF.text, !enterWeight.isEmpty else {
             showAlert(with: "Oops", and: "You forgot enter your weight")
             return
         }
-        
         guard let enterHight = hightTF.text, !enterHight.isEmpty else {
             showAlert(with: "Oops", and: "You forgot enter your hight")
             return
         }
     }
     
-    
-
-    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else {return}
         resultVC.result = result
-        
-   }
-    
+    }
 
 }
 extension IndexMassViewController {
@@ -73,15 +62,10 @@ extension IndexMassViewController {
                                       message: massage,
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK",
-                                     style: .default) { _ in
-           // self.weightTF.text = ""
-           // self.hightTF.text = ""
-        }
+                                     style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    //struct
 }
 
 
