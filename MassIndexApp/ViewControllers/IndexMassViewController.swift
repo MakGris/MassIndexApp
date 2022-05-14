@@ -8,6 +8,11 @@
 import UIKit
 
 class IndexMassViewController: UIViewController {
+    
+    var result: Double!
+    var weight: Double!
+    var hight: Double!
+    
 
     @IBOutlet var weightTF: UITextField!
     @IBOutlet var hightTF: UITextField!
@@ -19,12 +24,20 @@ class IndexMassViewController: UIViewController {
  
     }
     
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super.touchesBegan(touches, with: event)
             view.endEditing(true)
     }
     
     @IBAction func nextButtonPressed() {
+         weight = Double(weightTF.text!)!
+        hight = Double(hightTF.text!)!
+        
+        getIndexMass(weight: weight, hight: hight)
+        
+        
         guard let enterWeight = weightTF.text, !enterWeight.isEmpty else {
             showAlert(with: "Oops", and: "You forgot enter your weight")
             return
@@ -34,26 +47,25 @@ class IndexMassViewController: UIViewController {
             showAlert(with: "Oops", and: "You forgot enter your hight")
             return
         }
-        
-      
     }
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        guard let resultVC = segue.destination as? ResultViewController else {return}
+        resultVC.result = result
+        
+   }
+    
 
 }
 extension IndexMassViewController {
-    private func getIndexMass(_ weight: Int , hight: Int) -> Double{
-        Double(weight) / pow(Double(hight),2)
+    private  func getIndexMass(weight: Double , hight: Double){
+        result = weight / Double(pow((hight / 100) ,2))
     }
     
     private func showAlert(with title: String, and massage: String){
@@ -68,6 +80,8 @@ extension IndexMassViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    //struct
 }
 
 
