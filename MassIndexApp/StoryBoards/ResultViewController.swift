@@ -17,6 +17,9 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+       bodyTypesImage.image = UIImage(named: "BodyTypes")
+        
        showIndexMassType()
     }
     
