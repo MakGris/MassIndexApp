@@ -18,30 +18,33 @@ struct Training {
         var trainings = [Training]()
         switch type {
         case .weightLoss:
-            let name = data.exercisesWeightLoss
-            let description = data.descriptionWeightLoss
+            let names = data.exercisesWeightLoss
+            let descriptions = data.descriptionWeightLoss
             let reps = data.repsWeightLoss
             let sets = data.setsWeightLoss
-            for index in 0...data.exercisesWeightLoss.count - 1 {
-                let someTraining = Training(name: name[index], description: description[index], reps: reps[index], sets: sets[index])
+            let iteractionCount = min(names.count, descriptions.count, reps.count, sets.count)
+            for index in 0..<iteractionCount {
+                let someTraining = Training(name: names[index], description: descriptions[index], reps: reps[index], sets: sets[index])
                 trainings.append(someTraining)
             }
         case .weightGain:
-            let name = data.exercisesWeightGain
-            let description = data.descriptionWeightGain
+            let names = data.exercisesWeightGain
+            let descriptions = data.descriptionWeightGain
             let reps = data.repsWeightGain
             let sets = data.setsWeightGain
-            for index in 0...data.exercisesWeightGain.count - 1 {
-                let someTraining = Training(name: name[index], description: description[index], reps: reps[index], sets: sets[index])
+            let iteractionCount = min(names.count, descriptions.count, reps.count, sets.count)
+            for index in 0..<iteractionCount {
+                let someTraining = Training(name: names[index], description: descriptions[index], reps: reps[index], sets: sets[index])
                 trainings.append(someTraining)
             }
         case .weightSupport:
-            let name = data.exercisesweightSupport
-            let description = data.descriptionWeightSupport
+            let names = data.exercisesweightSupport
+            let descriptions = data.descriptionWeightSupport
             let reps = data.repsWeightSupport
             let sets = data.setsWeightSupport
-            for index in 0...data.exercisesweightSupport.count - 1 {
-                let someTraining = Training(name: name[index], description: description[index], reps: reps[index], sets: sets[index])
+            let iteractionCount = min(names.count, descriptions.count, reps.count, sets.count)
+            for index in 0..<iteractionCount {
+                let someTraining = Training(name: names[index], description: descriptions[index], reps: reps[index], sets: sets[index])
                 trainings.append(someTraining)
             }
             
