@@ -16,12 +16,7 @@ class TraningViewController: UITableViewController {
     }
 
 
-    // MARK: - Table view data source
-
-    //override func numberOfSections(in tableView: UITableView) -> Int {
-     //   namesTranning.count
-   // }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         namesTranning.count
     }
