@@ -13,7 +13,6 @@
 		D55353C0282E806000778766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55353BE282E806000778766 /* Main.storyboard */; };
 		D55353C2282E806100778766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55353C1282E806100778766 /* Assets.xcassets */; };
 		D55353C5282E806100778766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55353C3282E806100778766 /* LaunchScreen.storyboard */; };
-		D55353CD282E917000778766 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55353CC282E917000778766 /* Training.swift */; };
 		F368C131282EBC9800DE715D /* IndexMassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F368C130282EBC9800DE715D /* IndexMassViewController.swift */; };
 		F36C7E49282FB2A5005CD963 /* TraningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C7E48282FB2A5005CD963 /* TraningViewController.swift */; };
 		F36C7E4B282FB764005CD963 /* InfoTranningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C7E4A282FB764005CD963 /* InfoTranningViewController.swift */; };
@@ -29,7 +28,6 @@
 		D55353C1282E806100778766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55353C4282E806100778766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55353C6282E806100778766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D55353CC282E917000778766 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		F368C130282EBC9800DE715D /* IndexMassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexMassViewController.swift; sourceTree = "<group>"; };
 		F36C7E48282FB2A5005CD963 /* TraningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TraningViewController.swift; path = MassIndexApp/StoryBoards/TraningViewController.swift; sourceTree = SOURCE_ROOT; };
 		F36C7E4A282FB764005CD963 /* InfoTranningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTranningViewController.swift; sourceTree = "<group>"; };
@@ -68,10 +66,9 @@
 			children = (
 				D55353B8282E806000778766 /* AppDelegate.swift */,
 				D55353BA282E806000778766 /* SceneDelegate.swift */,
-				D55353CC282E917000778766 /* Training.swift */,
 				F368C133282EBEFB00DE715D /* StoryBoards */,
 				F368C132282EBEDD00DE715D /* ViewControllers */,
-				D55353C1282E806100778766 /* Assets.xcassets */,
+				F37C55992831031D00063914 /* Resources */,
 				D55353C6282E806100778766 /* Info.plist */,
 			);
 			path = MassIndexApp;
@@ -96,6 +93,14 @@
 				D55353BE282E806000778766 /* Main.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		F37C55992831031D00063914 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D55353C1282E806100778766 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +176,6 @@
 			files = (
 				F368C131282EBC9800DE715D /* IndexMassViewController.swift in Sources */,
 				D55353BD282E806000778766 /* ViewController.swift in Sources */,
-				D55353CD282E917000778766 /* Training.swift in Sources */,
 				F36C7E49282FB2A5005CD963 /* TraningViewController.swift in Sources */,
 				D55353B9282E806000778766 /* AppDelegate.swift in Sources */,
 				D55353BB282E806000778766 /* SceneDelegate.swift in Sources */,
