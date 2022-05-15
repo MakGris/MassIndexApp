@@ -66,7 +66,7 @@
 				D55353D1282F763B00778766 /* Services */,
 				D55353CE282F74D400778766 /* Model */,
 				D55353BE282E806000778766 /* Main.storyboard */,
-				D55353C1282E806100778766 /* Assets.xcassets */,
+				D565A6F12830E6C100AAE1AC /* Resources */,
 				D55353C3282E806100778766 /* LaunchScreen.storyboard */,
 				D55353C6282E806100778766 /* Info.plist */,
 			);
@@ -87,6 +87,14 @@
 				D55353CF282F763700778766 /* DataManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D565A6F12830E6C100AAE1AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D55353C1282E806100778766 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -57,7 +57,14 @@ class DataManager {
     ]
     let repsWeightGain = [12, 12, 10, 12, 15]
     let setsWeightGain = [4, 3, 3, 4, 3]
-    
+    let picturesWeightGain = [
+        "pushUps.jpg",
+        "squats.jpg",
+        "pullUps.jpg",
+        "bicepLift.jpg",
+        "pressLegLift.jpg"
+    ]
+   
     let exercisesWeightLoss = [
         "Выпрыгивания из положения сидя",
         "Прыжки на скакалке",
@@ -105,6 +112,13 @@ class DataManager {
     
     let repsWeightLoss = [15, 20, 12, 30, 15]
     let setsWeightLoss = [3, 3, 2, 3, 3]
+    let picturesWeightLoss = [
+        "jumpingOut.jpg",
+        "skippingRope.jpg",
+        "burpee.jpg",
+        "runningInPlace.jpg",
+        "boatPress.jpg"
+    ]
     
     let exercisesweightSupport = [
         "Отжимания широким хватом",
@@ -157,6 +171,12 @@ class DataManager {
     
     let repsWeightSupport = [10, 10, 10, 10, 15]
     let setsWeightSupport = [3, 3, 3, 2, 3]
-    
+    let picturesWeightSupport = [
+        "pushUps.jpg",
+        "squats.jpg",
+        "bicepLift.jpg",
+        "burpee.jpg",
+        "pressLegLift.jpg"
+    ]
     private init() {}
 }
