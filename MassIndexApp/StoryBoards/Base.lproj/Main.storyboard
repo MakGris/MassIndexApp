@@ -259,6 +259,10 @@
                             <constraint firstItem="uXC-C9-vJy" firstAttribute="centerX" secondItem="BTs-UH-kk1" secondAttribute="centerX" id="lFN-CY-WDE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoTraning" destination="y3W-pF-Ve9" id="Hpu-KN-Oes"/>
+                        <outlet property="photoWhatToDo" destination="vQM-PT-7G8" id="o4B-fB-NAp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noR-SH-evt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
