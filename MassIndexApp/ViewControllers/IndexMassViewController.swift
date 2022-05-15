@@ -30,11 +30,6 @@ class IndexMassViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed() {
-         weight = Double(weightTF.text!)!
-        hight = Double(hightTF.text!)!
-        
-        getIndexMass(weight: weight, hight: hight)
-        
         guard let enterWeight = weightTF.text, !enterWeight.isEmpty else {
             showAlert(with: "Oops", and: "You forgot enter your weight")
             return
@@ -43,6 +38,11 @@ class IndexMassViewController: UIViewController {
             showAlert(with: "Oops", and: "You forgot enter your hight")
             return
         }
+        
+        weight = Double(weightTF.text!)
+        hight = Double(hightTF.text!)
+        
+        getIndexMass(weight: weight, hight: hight)
     }
     
     // MARK: - Navigation
