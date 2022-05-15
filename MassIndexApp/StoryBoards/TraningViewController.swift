@@ -13,6 +13,7 @@ class TraningViewController: UITableViewController {
     let numbersOfApproaches = ["3x15","3x14","3x13","3x12","3x11",]
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("Hello")
     }
 
 
