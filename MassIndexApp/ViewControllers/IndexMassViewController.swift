@@ -13,16 +13,10 @@ class IndexMassViewController: UIViewController {
     var weight: Double!
     var hight: Double!
     
-
     @IBOutlet var weightTF: UITextField!
     @IBOutlet var hightTF: UITextField!
     
     @IBOutlet var nextButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
- 
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super.touchesBegan(touches, with: event)
@@ -50,8 +44,8 @@ class IndexMassViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else {return}
         resultVC.result = result
     }
-
 }
+
 extension IndexMassViewController {
     private  func getIndexMass(weight: Double , hight: Double){
         result = weight / Double(pow((hight / 100) ,2))
