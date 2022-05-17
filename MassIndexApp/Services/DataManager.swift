@@ -178,5 +178,7 @@ class DataManager {
         "burpee.jpg",
         "pressLegLift.jpg"
     ]
+    
+    
     private init() {}
 }
