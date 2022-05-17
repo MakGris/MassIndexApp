@@ -10,7 +10,7 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var result: Double!
-
+    var trainings: [Training]!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var bodyTypesImage: UIImageView!
     
@@ -25,10 +25,13 @@ class ResultViewController: UIViewController {
     
     private func showIndexMassType(){
         if result <= 18.5 {
+            trainings = Training.getTraining(for: .weightGain)
             resultLabel.text = String("Your body mass index is \(Int(result)) , there is a deficit ")
         } else if result <= 30 && result > 18.5 {
             resultLabel.text = String("Your body mass index is \(Int(result)) , there is a normal ")
+            trainings = Training.getTraining(for: .weightSupport)
         } else if result > 30 {
+            trainings = Training.getTraining(for: .weightLoss)
             resultLabel.text = String("Your body mass index is \(Int(result)) , there is a obesity ")
 
         }
@@ -40,15 +43,13 @@ class ResultViewController: UIViewController {
     
     
 
-    /*
+  
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         guard let trainingVC = segue.destination as? TraningViewController else { return }
+         trainingVC.trainings = trainings
+        
+     }
 
 }
 
