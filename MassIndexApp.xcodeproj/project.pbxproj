@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D505B3BE28311469002F16AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D505B3BA28311469002F16AD /* Main.storyboard */; };
 		D505B3BF28311469002F16AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D505B3BC28311469002F16AD /* LaunchScreen.storyboard */; };
-		D50968B52831356E00A4ED96 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D50968B42831356E00A4ED96 /* .gitignore */; };
 		D55353B9282E806000778766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55353B8282E806000778766 /* AppDelegate.swift */; };
 		D55353BB282E806000778766 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55353BA282E806000778766 /* SceneDelegate.swift */; };
 		D55353C2282E806100778766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55353C1282E806100778766 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		D505B3BB28311469002F16AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D505B3BD28311469002F16AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D50968B42831356E00A4ED96 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D55353B5282E806000778766 /* MassIndexApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassIndexApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55353B8282E806000778766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D55353BA282E806000778766 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				D55353CE282F74D400778766 /* Model */,
 				F37C55992831031D00063914 /* Resources */,
 				D55353C6282E806100778766 /* Info.plist */,
-				D50968B42831356E00A4ED96 /* .gitignore */,
 			);
 			path = MassIndexApp;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50968B52831356E00A4ED96 /* .gitignore in Resources */,
 				D505B3BF28311469002F16AD /* LaunchScreen.storyboard in Resources */,
 				D55353C2282E806100778766 /* Assets.xcassets in Resources */,
 				D505B3BE28311469002F16AD /* Main.storyboard in Resources */,
