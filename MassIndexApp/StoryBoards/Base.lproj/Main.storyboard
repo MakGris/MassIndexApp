@@ -85,7 +85,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your haight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-wT-dLn">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-wT-dLn">
                                         <rect key="frame" x="0.0" y="69" width="141.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -113,7 +113,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3wU-zY-mb6"/>
                     <connections>
-                        <outlet property="hightTF" destination="H7M-wT-dLn" id="UW1-mq-d0R"/>
+                        <outlet property="heightTF" destination="H7M-wT-dLn" id="AEu-dy-cxX"/>
                         <outlet property="nextButton" destination="Ldr-LB-bDk" id="jih-WN-0Qj"/>
                         <outlet property="weightTF" destination="gq7-t4-PJT" id="JJL-Tu-CBX"/>
                     </connections>
@@ -141,7 +141,6 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="showWorkoutPressed" destination="n6E-o4-osY" eventType="touchUpInside" id="g3y-Ju-l2G"/>
                                     <segue destination="WW5-Z4-FlN" kind="show" id="Pb1-dJ-IqR"/>
                                 </connections>
                             </button>
