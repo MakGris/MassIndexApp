@@ -9,6 +9,7 @@ import UIKit
 
 class TraningViewController: UITableViewController {
     var trainings:[Training]!
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         trainings.count
