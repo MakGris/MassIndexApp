@@ -45,7 +45,7 @@ class TraningViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          guard let infoTranningVC = segue.destination as? InfoTranningViewController else {return}
          guard let indexPath = tableView.indexPathForSelectedRow else {return}
-         let nameTranning = trainings[indexPath.row].name
+         let nameTranning = trainings[indexPath.row]
          infoTranningVC.nameTranning = nameTranning
       
      }
