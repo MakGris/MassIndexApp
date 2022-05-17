@@ -9,14 +9,19 @@ import UIKit
 
 class InfoTranningViewController: UIViewController {
     
-    var nameTranning: Training!
-    
     @IBOutlet var photoWhatToDo: UIImageView!
     @IBOutlet var infoTraning: UILabel!
     
+    var nameTranning: Training!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tuneUI()
+    }
+}
+
+extension InfoTranningViewController {
+    func tuneUI() {
         photoWhatToDo.layer.borderWidth = 2
         photoWhatToDo.layer.borderColor = UIColor.black.cgColor
         photoWhatToDo.contentMode = .scaleAspectFit

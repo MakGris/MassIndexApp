@@ -8,9 +8,9 @@
 import UIKit
 
 class TraningViewController: UITableViewController {
+    
     var trainings:[Training]!
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         trainings.count
     }
@@ -28,7 +28,9 @@ class TraningViewController: UITableViewController {
         
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

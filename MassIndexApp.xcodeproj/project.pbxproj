@@ -97,10 +97,10 @@
 		F368C132282EBEDD00DE715D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F368C130282EBC9800DE715D /* IndexMassViewController.swift */,
+				F3BEF6DD282ED5A5006BB337 /* ResultViewController.swift */,
 				F36C7E48282FB2A5005CD963 /* TraningViewController.swift */,
 				F36C7E4A282FB764005CD963 /* InfoTranningViewController.swift */,
-				F3BEF6DD282ED5A5006BB337 /* ResultViewController.swift */,
-				F368C130282EBC9800DE715D /* IndexMassViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
