@@ -9,7 +9,7 @@ import UIKit
 
 class InfoTranningViewController: UIViewController {
     
-    var nameTranning: String!
+    var nameTranning: Training!
 
     @IBOutlet var photoWhatToDo: UIImageView!
     
@@ -17,8 +17,15 @@ class InfoTranningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoWhatToDo.image = UIImage(named: nameTranning.picture)
+        
+        infoTraning.text = nameTranning.description
+        
+        
 
     }
     
 
 }
+
