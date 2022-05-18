@@ -8,21 +8,13 @@
 import UIKit
 
 class TraningViewController: UITableViewController {
+    
     var trainings:[Training]!
-//    let namesTranning = ["Tranning1","Tranning2","Tranning3","Tranning4","Tranning5",]
-//    let numbersOfApproaches = ["3x15","3x14","3x13","3x12","3x11",]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
-
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         trainings.count
     }
-
-    
+        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoTraningID", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -33,21 +25,19 @@ class TraningViewController: UITableViewController {
         content.secondaryText = numberOfApproaches
         
         cell.contentConfiguration = content
-    
-
+        
         return cell
     }
-    
-
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     // MARK: - Navigation
 
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         guard let infoTranningVC = segue.destination as? InfoTranningViewController else {return}
-         guard let indexPath = tableView.indexPathForSelectedRow else {return}
-         let nameTranning = trainings[indexPath.row].name
-         infoTranningVC.nameTranning = nameTranning
-      
-     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let infoTranningVC = segue.destination as? InfoTranningViewController else {return}
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
+        let nameTranning = trainings[indexPath.row]
+        infoTranningVC.nameTranning = nameTranning
+    }
+    
 }

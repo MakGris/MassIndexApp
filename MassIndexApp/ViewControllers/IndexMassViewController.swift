@@ -9,20 +9,14 @@ import UIKit
 
 class IndexMassViewController: UIViewController {
     
-    var result: Double!
-    var weight: Double!
-    var hight: Double!
-    
-
     @IBOutlet var weightTF: UITextField!
-    @IBOutlet var hightTF: UITextField!
+    @IBOutlet var heightTF: UITextField!
     
     @IBOutlet var nextButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
- 
-    }
+    private var result: Double!
+    private var weight: Double!
+    private var height: Double!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super.touchesBegan(touches, with: event)
@@ -34,15 +28,15 @@ class IndexMassViewController: UIViewController {
             showAlert(with: "Oops", and: "You forgot enter your weight")
             return
         }
-        guard let enterHight = hightTF.text, !enterHight.isEmpty else {
-            showAlert(with: "Oops", and: "You forgot enter your hight")
+        guard let enterHeight = heightTF.text, !enterHeight.isEmpty else {
+            showAlert(with: "Oops", and: "You forgot enter your height")
             return
         }
         
         weight = Double(weightTF.text!)
-        hight = Double(hightTF.text!)
+        height = Double(heightTF.text!)
         
-        getIndexMass(weight: weight, hight: hight)
+        getIndexMass(weight: weight, height: height)
     }
     
     // MARK: - Navigation
@@ -50,14 +44,14 @@ class IndexMassViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else {return}
         resultVC.result = result
     }
-
 }
+
 extension IndexMassViewController {
-    private  func getIndexMass(weight: Double , hight: Double){
-        result = weight / Double(pow((hight / 100) ,2))
+    private  func getIndexMass(weight: Double , height: Double) {
+        result = weight / Double(pow((height / 100) ,2))
     }
     
-    private func showAlert(with title: String, and massage: String){
+    private func showAlert(with title: String, and massage: String) {
         let alert = UIAlertController(title: title,
                                       message: massage,
                                       preferredStyle: .alert)
